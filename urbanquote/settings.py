@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-# import dj_database_url
+import dj_database_url
 
 # https://powerful-gorge-57473.herokuapp.com/ | https://git.heroku.com/powerful-gorge-57473.git
 
@@ -89,24 +89,24 @@ WSGI_APPLICATION = 'urbanquote.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'urbanquote',
-        'USER': 'urbanquoteuser',
-        'PASSWORD': 'urbanquotesenha',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
 # DATABASES = {
-#     'default': dj_database_url.config(
-#         default='postgresql://localhost/urbanquote?user=urbanquoteuser&password=urbanquotesenha',
-#         conn_max_age=600,
-#         ssl_require=not DEBUG
-#     )
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'urbanquote',
+#         'USER': 'urbanquoteuser',
+#         'PASSWORD': 'urbanquotesenha',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
 # }
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgresql://localhost/urbanquote?user=urbanquoteuser&password=urbanquotesenha',
+        conn_max_age=600,
+        ssl_require=not DEBUG
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
