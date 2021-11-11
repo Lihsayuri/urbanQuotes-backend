@@ -25,7 +25,7 @@ https://stormy-depths-56864.herokuapp.com/
 
  Outras dependências utilizadas estão no requirements.txt
  
-## Link para visualizar o teste do Backend :heavy_check_mark::
+## Vídeo do teste do Backend :heavy_check_mark::
 
 
 https://user-images.githubusercontent.com/62613979/141359791-da2a4653-6d2f-42fc-bc67-1bc7d62650b8.mp4
