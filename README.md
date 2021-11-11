@@ -12,7 +12,17 @@
 ### Banco de Dados utilizado:
 - Postgres 
 
+
 ### Link para visualização do Backend no Heroku:
 https://powerful-gorge-57473.herokuapp.com
 
+
+### Link para visualização do Frontend no Heroku:
+https://stormy-depths-56864.herokuapp.com/
+
+
 #### Outras dependências utilizadas estão no requirements.txt
+
+# Projeto feito por:
+- Henrique Martinelli Frezzatti
+- Lívia Sayuri Makuta
