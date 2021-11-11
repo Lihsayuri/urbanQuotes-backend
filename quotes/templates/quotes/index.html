@@ -1,0 +1,29 @@
+{% extends "quotes/base.html" %}
+
+{% block content %}
+{% load static %}
+
+<img src="{% static 'quotes/img/logo_quote.jpg' %}" />
+<p>Frases para motivar o seu dia (ou talvez não)</p>
+
+<form method="post">
+    {% csrf_token %}
+  <label for="frase">Frase</label>
+  <textarea id="frase" name="frase"></textarea>
+  <label for="autor">Autor</label>
+  <input id="autor" type="text" name="autor" />
+  <label for="tags">Tags</label>
+  <input id="tags" type="text" name="tags" />
+  <input type="submit" />
+</form>
+
+<ul>
+    {% for quote in quotes %}
+    <li> Frase : {{ quote.frase }}</li>
+     Autor : {{quote.autor}}
+    {% for tag in quote.tags.all %}
+     tag: {{tag.tag}}
+    {% endfor %}
+    {% endfor %}
+  </ul>
+{% endblock %}
